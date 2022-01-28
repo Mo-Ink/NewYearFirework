@@ -17,7 +17,7 @@ import java.util.Map;
 public class MainCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        Plugin plugin = NewYearFirework.getInstance();
+        Plugin plugin = NewYearFirework.getProvidingPlugin(NewYearFirework.class);
         FileConfiguration config = plugin.getConfig();
         String messageFront = ChatColor.YELLOW + config.getString("message-front");
         if (!(commandSender.hasPermission("nyf.commands.use"))) {
@@ -107,9 +107,9 @@ public class MainCommand implements CommandExecutor {
                         String name = (String) map.get("name");
                         String world = (String) map.get("world");
                         List<Double> pos = (List<Double>) map.get("pos");
-                        String x = String.format("%.3f", pos.get(0)); //保留三位小数
-                        String y = String.format("%.3f", pos.get(1));
-                        String z = String.format("%.3f", pos.get(2));
+                        String x = String.format("%.1f", pos.get(0)); //保留一位小数
+                        String y = String.format("%.1f", pos.get(1));
+                        String z = String.format("%.1f", pos.get(2));
                         commandSender.sendMessage(messageFront + ChatColor.AQUA + name + " " + world + " " + x + " " + y + " " + z);
                     }
                 });

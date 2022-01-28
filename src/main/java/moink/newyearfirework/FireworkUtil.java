@@ -5,6 +5,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
 import org.bukkit.inventory.meta.FireworkMeta;
+import org.bukkit.plugin.Plugin;
 
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public class FireworkUtil {
     }
 
     private static void work(List<Map<?, ?>> locations, int period) {
-        NewYearFirework instance = NewYearFirework.getInstance();
-        Bukkit.getScheduler().runTaskTimerAsynchronously(instance, () -> {
+        Plugin plugin = NewYearFirework.getProvidingPlugin(NewYearFirework.class);
+        Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, () -> {
             for (Map<?, ?> map : locations) {
                 if (!isWorking) return;
                 String worldName = (String) map.get("world");
@@ -66,7 +67,7 @@ public class FireworkUtil {
 
                 FireworkEffect f = fb.build();
 
-                Bukkit.getScheduler().runTask(instance, () -> {
+                Bukkit.getScheduler().runTask(plugin, () -> {
                     World world = Bukkit.getWorld(worldName);
                     Location location = new Location(world, x, y, z);
                     Firework fw = (Firework) world.spawnEntity(location, EntityType.FIREWORK);

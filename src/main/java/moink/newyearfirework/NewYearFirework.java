@@ -4,18 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class NewYearFirework extends JavaPlugin {
-
-    private static NewYearFirework INSTANCE;
-
-    public static NewYearFirework getInstance() {
-        return INSTANCE;
-    }
-
-    @Override
-    public void onLoad() {
-        INSTANCE = this;
-    }
-
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
