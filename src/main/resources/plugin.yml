@@ -1,0 +1,13 @@
+name: NewYearFirework
+version: 1.2
+main: moink.newyearfirework.NewYearFirework
+api-version: 1.18
+commands:
+  newyearfirework:
+    aliases:
+      - "nyf"
+    description: "主指令"
+permissions:
+  nyf.commands.use:
+    description: "使用插件的权限"
+    default: op

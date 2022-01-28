@@ -1,0 +1,15 @@
+message-reload: 插件重载成功
+message-success: 已完成操作：
+message-error: 你这语法有问题啊kora
+message-no: 这种事情是不可以做的哦
+message-console: 控制台哥哥不能这样啦QwQ
+message-front: 【烟花】
+message-working: 已经开始工作啦
+message-nonworking: 没有在进行的工作哟
+message-notfound: 没有找到燃放点
+message-repeat: 名称与已有燃放点重复
+
+period: 15
+
+locations:
+
