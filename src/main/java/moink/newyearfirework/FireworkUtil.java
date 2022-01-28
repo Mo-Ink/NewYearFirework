@@ -74,7 +74,6 @@ public class FireworkUtil {
                     fwm.clearEffects();
                     fwm.addEffect(f);
                     fwm.setPower(r.nextInt(3) + 2);
-                    fw.setShotAtAngle(true);
                     fw.setFireworkMeta(fwm);
                 });
             }
