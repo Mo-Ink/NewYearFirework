@@ -42,9 +42,14 @@ public class FireworkUtil {
                 //随机颜色
                 fb.withColor(
                         Color.fromRGB(r.nextInt(156) + 100, r.nextInt(156) + 100, r.nextInt(156) + 100),
-                        Color.fromRGB(r.nextInt(106) + 150, r.nextInt(106) + 150, r.nextInt(106) + 150),
-                        Color.fromRGB(r.nextInt(136) + 120, r.nextInt(136) + 120, r.nextInt(136) + 120));
-                fb.withFade(Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255)));
+                        Color.fromRGB(r.nextInt(136) + 120, r.nextInt(136) + 120, r.nextInt(136) + 120),
+                        Color.fromRGB(r.nextInt(116) + 140, r.nextInt(116) + 140, r.nextInt(116) + 140),
+                        Color.fromRGB(r.nextInt(96) + 160, r.nextInt(96) + 160, r.nextInt(96) + 160)
+                );
+                fb.withFade(
+                        Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255)),
+                        Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255))
+                );
 
                 //随机形状
                 FireworkEffect.Type[] type = FireworkEffect.Type.values();
@@ -69,6 +74,7 @@ public class FireworkUtil {
                     fwm.clearEffects();
                     fwm.addEffect(f);
                     fwm.setPower(r.nextInt(3) + 2);
+                    fw.setShotAtAngle(true);
                     fw.setFireworkMeta(fwm);
                 });
             }
