@@ -29,6 +29,7 @@ public class MainCommand implements CommandExecutor {
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "————————————————插件用法————————————");
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf add <名称> - 添加玩家位置为一个燃放点");
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf del <名称> - 删除一个燃放点");
+            commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf list - 查看燃放点列表");
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf start - 开始燃放烟花");
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf stop - 停止燃放烟花");
             commandSender.sendMessage(messageFront + ChatColor.AQUA + "/nyf reload - 重载插件");
