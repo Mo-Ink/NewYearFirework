@@ -95,6 +95,12 @@ public class MainCommand implements CommandExecutor {
                 commandSender.sendMessage(messageFront + ChatColor.GREEN + messageSuccess + "停止烟花燃放");
             } else if (Message0.equals("list")) {
                 List<Map<?, ?>> locations = config.getMapList("locations");
+                if (locations.isEmpty()) {
+                    String messageNotfound = config.getString("message-notfound");
+                    commandSender.sendMessage(messageFront + ChatColor.RED + messageNotfound);
+                    return false;
+                }
+                commandSender.sendMessage(messageFront + ChatColor.AQUA + "燃放点列表如下：");
                 Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                     for (Map<?, ?> map : locations) {
                         String name = (String) map.get("name");
@@ -103,7 +109,6 @@ public class MainCommand implements CommandExecutor {
                         double x = pos.get(0);
                         double y = pos.get(1);
                         double z = pos.get(2);
-                        commandSender.sendMessage(messageFront + ChatColor.AQUA + "燃放点列表如下：");
                         commandSender.sendMessage(messageFront + ChatColor.AQUA + name + " " + world + " " + x + " " + y + " " + z);
                     }
                 });
