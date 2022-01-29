@@ -65,6 +65,8 @@ public class FireworkUtil {
                     fb.withTrail();
                 }
 
+                int power = r.nextInt(3) + 2;
+
                 FireworkEffect f = fb.build();
 
                 Bukkit.getScheduler().runTask(plugin, () -> {
@@ -74,8 +76,9 @@ public class FireworkUtil {
                     FireworkMeta fwm = fw.getFireworkMeta();
                     fwm.clearEffects();
                     fwm.addEffect(f);
-                    fwm.setPower(r.nextInt(3) + 2);
+                    fwm.setPower(power);
                     fw.setFireworkMeta(fwm);
+                    Bukkit.getScheduler().runTaskLater(plugin, new RemoveFirework(fw), power * 30L + 40L);
                 });
             }
         }, 1, period);
