@@ -1,4 +1,4 @@
-package moink.newyearfirework;
+package io.github.sugarmgp.newyearfirework;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

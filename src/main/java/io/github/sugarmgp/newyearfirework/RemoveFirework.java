@@ -2,7 +2,7 @@
 // Decompiled by Procyon v0.5.36
 // 
 
-package moink.newyearfirework;
+package io.github.sugarmgp.newyearfirework;
 
 import org.bukkit.entity.Firework;
 

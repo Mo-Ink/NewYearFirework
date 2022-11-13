@@ -1,7 +1,7 @@
 name: NewYearFirework
 version: 1.2
-main: moink.newyearfirework.NewYearFirework
-api-version: 1.18
+main: io.github.sugarmgp.newyearfirework.NewYearFirework
+api-version: 1.16
 commands:
   newyearfirework:
     aliases:

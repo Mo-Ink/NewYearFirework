@@ -1,4 +1,4 @@
-package moink.newyearfirework;
+package io.github.sugarmgp.newyearfirework;
 
 import org.bukkit.*;
 import org.bukkit.configuration.file.FileConfiguration;
